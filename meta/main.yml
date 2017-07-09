@@ -1,7 +1,7 @@
 galaxy_info:
   author: Daniel Winter
 
-  description: install and set up autofs
+  description: install and set up autofs to automount nfs shares in /net
 
   name: autofs
 
