@@ -1,0 +1,5 @@
+---
+# ubuntu os specific vars
+role_autofs_packages:
+      - autofs
+      - nfs-common
