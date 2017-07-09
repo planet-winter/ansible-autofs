@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Daniel Winter
+
+  description: install and set up autofs
+
+  name: autofs
+
+  license: (MIT)
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Ubuntu
+      versions:
+        - 16.04
+              
+  galaxy_tags:
+    - planet-winter
+    - autofs

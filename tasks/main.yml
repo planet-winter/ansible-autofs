@@ -1,0 +1,14 @@
+---
+
+- name: install autofs
+  action: "{{ ansible_pkg_mgr }} state=installed name={{ item }}"
+  with_items:
+    - autofs
+    - nfs-utils
+
+- name: enable and start autofs
+  service:
+    name: autofs
+    state: started
+    enabled: true
+    use: systemd
