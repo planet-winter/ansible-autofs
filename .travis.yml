@@ -5,8 +5,7 @@ services:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-ce \
-                                   gcc python-pip python-vagrant libssl-dev libffi-dev
+  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-ce gcc python-pip python-vagrant libssl-dev libffi-dev
 
 install:
   - pip install molecule ansible docker python-vagrant
