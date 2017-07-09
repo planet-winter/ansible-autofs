@@ -2,16 +2,21 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
-docker:
-  containers:
-    - name: centos7
-      image: planetw/docker-centos7-ansible
-      image_version: latest
-      privileged: True
-      required: True
-    - name: ubuntu16.04
-      image: solita/ubuntu-systemd
-      image_version: latest
-      privileged: True
-      required: True
+  name: vagrant
+vagrant:
+  platforms:
+    - name: ubuntu/trusty64
+      box: trusty64
+      box_url: https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/14.04/providers/virtualbox.box
+  providers:
+    - name: virtualbox
+      type: virtualbox
+      options:
+        memory: 512
+        cpus: 2
+  instances:
+    - name: ansible-autofs
+      ansible_groups:
+        - group1
+verifier:
+  name: testinfra

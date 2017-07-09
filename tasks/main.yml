@@ -15,7 +15,7 @@
                             
 - name: install packages
   action: "{{ ansible_pkg_mgr }} state=installed name={{ item }}"
-  with_items: "{{ role_ssh_packages }}"
+  with_items: "{{ role_autofs_packages }}"
   when: role_autofs_packages is defined
                                                                                                          
 - name: install autofs
