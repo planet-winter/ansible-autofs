@@ -1,5 +1,0 @@
----
-# centos os specific vars
-role_autofs_packages:
-  - autofs
-  - nfs-utils
